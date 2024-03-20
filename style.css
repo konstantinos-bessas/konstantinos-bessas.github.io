@@ -31,6 +31,7 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --bg-image-html: url(images/background50.png);
+  --bg-image-html-mobile: url(images/background50Mobile.svg);
   --color-title-effect-one: var(--color-one);
   --color-title-effect-two: var(--color-two);
 }
@@ -60,6 +61,7 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --bg-image-html: url(images/background25dark.png);
+  --bg-image-html-mobile: url(images/background25darkMobile.svg);
   --color-title-effect-one: aquamarine;
   --color-title-effect-two: silver;
 }
@@ -581,6 +583,21 @@ background-color: var(--color-main-navigation-bar);
 .topnav__icon {
   display: none;
 }
+
+
+
+
+
+@media screen and (max-width: 800px) {
+  html{
+    background-attachment: scroll;
+    background-image: var(--bg-image-html-mobile); 
+    background-repeat: repeat;
+    height: 100%;
+  }
+}
+
+
 
 
 @media screen and (max-width: 750px) {
