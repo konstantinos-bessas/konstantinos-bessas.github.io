@@ -1,0 +1,202 @@
+﻿<!doctype html>
+<html data-theme="empty" lang="en-US">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Konstantinos Bessas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content=" "
+    >
+    <link rel="icon" href="Icona.svg" type="image/x-icon">
+    <!-- https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup -->
+    <script src="Loaded.js"></script>
+    <script src="navbar.js"></script>
+    <script src="icon_navbar.js"></script>
+    <script src="language.js"></script>
+    <script src="toggleTheme.js" async></script>
+    <script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <title>
+      Curriculum
+    </title>
+  </head>
+  <body onclick="Loaded()">
+    <div class="toggle-theme-part">
+      <button type="button" data-theme-toggle aria-label="Change to light theme">
+        ⌛
+      </button>
+    </div><!--toggle-theme-part-->
+    <header>
+      <h1 id="main-title" class="unloaded">Curriculum</h1>
+    </header>  
+    <!-- https://medium.com/@nohanabil/building-a-multilingual-static-website-a-step-by-step-guide-7af238cc8505 -->
+    <div class="topnav" id="main-navigation-bar">
+      <div class="topnav__icon-container">
+        <a href="javascript:void(0);" class="topnav__icon" onclick="ResponsiveNavbar()">
+          <div class="menu-icon" onclick="ToggleIconNavbar(this)">
+            <div class="menu-icon__bar1"></div>
+            <div class="menu-icon__bar2"></div>
+            <div class="menu-icon__bar3"></div>
+          </div>
+        </a>
+      </div>
+      <div class="topnav__language-bar">
+        <ul>
+          <li><a href="" onclick="changeLanguage('en')">EN</a></li>
+          <li><a href="" onclick="changeLanguage('it')">IT</a></li>
+        </ul>
+      </div>
+      <nav class="topnav__main-navigation-bar">
+        <a href="index.html" class="topnav__main-button">
+          <span data-i18n="Home_main-navigation-bar"></span>
+        </a>
+        <a href="research.html" class="topnav__main-button">
+          <span data-i18n="Research_main-navigation-bar"></span>
+        </a>
+        <a href="curriculum.html" class="topnav__main-button topnav__main-button--active">
+          <span data-i18n="Curriculum_main-navigation-bar"></span>
+        </a>
+        <a href="teaching.html" class="topnav__main-button">
+          <span data-i18n="Teaching_main-navigation-bar"></span>
+        </a>
+        <a href="scientific-communications.html" class="topnav__main-button">
+          <span data-i18n="Scientific_Communications_main-navigation-bar"></span>
+        </a>
+      </nav>   
+    </div><!--topnav-->   
+    <div class="main-and-sidebar">
+      <main>
+        <div class="cv-box">
+          <h2 data-i18n="Short_CV"></h2>
+          <hr class="separator separator--line-medium unloaded">
+          <h3 data-i18n="Academic_Positions"></h3>
+          <hr class="separator separator--line-small unloaded">
+          <table>
+            <tr>
+              <th><span data-i18n="Mar"></span> 2023 – <span data-i18n="Present"></span></th>
+              <td>
+                <strong><span data-i18n="PostDocUNIPV"></span>.</strong><br>
+                Università di Pavia, Pavia (Italy).<br>
+                <span data-i18n="PostDocUNIPV_Mentor"></span>.
+              </td>
+            </tr>
+          </table> 
+          <h3 data-i18n="Education"></h3>
+          <hr class="separator separator--line-small unloaded">
+          <table>
+            <tr>
+              <th><span data-i18n="Nov"></span> 2019 – <span data-i18n="May"></span> 2023</th>
+              <td>
+                <strong><span data-i18n="PhD"></span>.</strong><br>
+                Università di Pisa, Pisa (Italy).<br>
+                <span data-i18n="PhD_Supervisor"></span>.
+              </td>
+            </tr>
+            <tr>
+              <th><span data-i18n="Dec"></span> 2016 – <span data-i18n="Apr"></span> 2019</th>
+              <td>
+                <strong><span data-i18n="MSC"></span>.</strong><br>
+                Università degli Studi di Parma, Parma (Italy).<br>
+                <span data-i18n="MSC_Supervisor"></span>.
+              </td>
+            </tr>
+            <tr>
+              <th><span data-i18n="Sep"></span> 2013 – <span data-i18n="Dec"></span> 2016</th>
+              <td>
+                <strong><span data-i18n="BSC"></span>.</strong><br>
+                Università degli Studi di Parma, Parma (Italy).<br>
+                <span data-i18n="BSC_Supervisor"></span>.
+              </td>
+            </tr>
+          </table>
+          <h3 data-i18n="Grants"></h3>
+          <hr class="separator separator--line-small unloaded">
+          <table>
+            <tr>
+              <th><span data-i18n="Mar"></span> 2024 – <span data-i18n="Feb"></span> 2027</th>
+              <td>
+                <strong data-i18n="CARIPLO2023"></strong>, <span data-i18n="CARIPLO2023_message"></span>.
+              </td>
+            </tr>
+          </table>
+          <h3 data-i18n="Scholarships"></h3>
+          <hr class="separator separator--line-small unloaded">
+          <table>
+            <tr>
+              <th><span data-i18n="Nov"></span> 2019 – <span data-i18n="Jan"></span> 2023</th>
+              <td>
+                <strong data-i18n="PhD_Scholarship"></strong> <span data-i18n="PhD_Scholarship_message"></span>.
+              </td>
+            </tr>
+            <tr>
+              <th>2013 – 2016</th>
+              <td>
+                <strong data-i18n="INdAM_Scholarship"></strong> <span data-i18n="INdAM_Scholarship_message"></span>.
+              </td>
+            </tr>
+          </table>
+          <h2 data-i18n="Full_CV"></h2>
+          <hr class="separator separator--line-medium unloaded">
+          <p>
+            <span data-i18n="Full_CV_message"></span>
+          </p>
+            <ul>
+              <li><a target="_blank" href="CV/CV_Bessas_ENG.pdf"><span data-i18n="English_CV"></span></a></li>
+              <li><a target="_blank" href="CV/CV_Bessas_ITA.pdf"><span data-i18n="Italian_CV""></span></a></li>
+            </ul>
+        </div>
+      </main>
+      <div class="sidebar">
+        <h2 data-i18n="Links"></h2>
+        <ul>
+          <li id="Link_NimVar">
+            <a target="_blank" href="NimVar/index.html">
+              <img
+              src="images/NimVar_Logo.png"
+              alt="NimVar-Logo"
+              width="100"
+              >
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://orcid.org/0000-0001-6810-3741">
+              ORCID
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://www.researchgate.net/profile/Konstantinos-Bessas">
+              ResearchGate
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://arxiv.org/search/math?query=Bessas%2C+Konstantinos&searchtype=author&abstracts=show&order=-announced_date_first&size=50">
+              arXiv
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://cvgmt.sns.it/person/2715/">
+              CVGMT
+            </a>
+          </li>
+        </ul>
+      </div><!--sidebar--> 
+    </div>
+    <footer>
+      <hr class="separator separator--line">
+      <p>
+        Konstantinos Bessas<br>
+        Dipartimento di Matematica<br> 
+        Università degli Studi di Pavia<br>
+        via Ferrata, 5 - 27100 Pavia (Italia)<br>
+      </p> 
+    </footer>
+  </body>
+</html>

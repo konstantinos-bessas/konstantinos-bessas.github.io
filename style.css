@@ -1,0 +1,869 @@
+[data-theme="empty"] {
+  --color-text-primary:  rgba(0, 0, 0, 0);
+  --color-bg-toggle-theme: rgba(0, 0, 0, 0);
+  --color-fg-toggle-theme: rgba(0, 0, 0, 0);
+}
+
+*{
+--dimension-blur-backdrop: 5px;
+}
+
+[data-theme="light"] {
+  --color-text-primary: black;
+  --color-text-secondary: white;
+  --color-one: gold;
+  --color-two: rgb(75, 52, 6);
+  --color-three: rgb(51, 51, 51, 0.8);
+  --color-four:#9C870f;
+  --color-five:rgb(255, 215, 0, 0.5);
+  --color-six:rgba(193, 132, 28, 0.8);
+  --color-seven: #ffee0070;
+  --color-eight:#9c870faf;
+  --color-bg-h2: var(--color-eight);
+  --color-link-unhover: var(--color-one);
+	--color-link-hover: var(--color-two);
+  --color-main-navigation-bar: var(--color-three);
+  --color-main-navigation-bar-button-unhover: var(--color-text-secondary);
+  --color-main-navigation-bar-button-hover: var(--color-one);
+  --color-main-navigation-bar-button-active: var(--color-four);
+  --color-main-navigation-bar-bars: var(--color-main-navigation-bar);
+  --color-bg-toggle-theme: var(--color-five);
+  --color-fg-toggle-theme: var(--color-six);
+  --color-bg-image-html-one: var(--color-seven);
+  --bg-image-html: url(images/background50.png);
+  --color-title-effect-one: var(--color-one);
+  --color-title-effect-two: var(--color-two);
+}
+
+[data-theme="dark"] {
+  --color-text-primary: white;
+  --color-text-secondary: silver;
+  --color-one: rgb(199, 226, 255);
+  --color-two: rgb(15, 0, 128);
+  --color-three: rgb(51, 51, 51, 0.8);
+  --color-four:#656565;
+  --color-five: rgba(11, 11, 135, 0.5);
+  --color-six:rgb(192, 192, 192, 0.8);
+  --color-seven: #021380ac; 
+  --color-eight: rgb(46, 46, 177);
+  --color-nine: rgb(157, 23, 209);
+  --color-ten:#656565b1;
+  --color-bg-h2: var(--color-ten);
+  --color-link-unhover: var(--color-one);
+	--color-link-hover: var(--color-nine);
+  --color-main-navigation-bar: var(--color-three);
+  --color-main-navigation-bar-button-unhover: var(--color-text-secondary);
+  --color-main-navigation-bar-button-hover: var(--color-eight);
+  --color-main-navigation-bar-button-active: var(--color-four);
+  --color-main-navigation-bar-bars: var(--color-six);
+  --color-bg-toggle-theme: var(--color-five);
+  --color-fg-toggle-theme: var(--color-six);
+  --color-bg-image-html-one: var(--color-seven);
+  --bg-image-html: url(images/background25dark.png);
+  --color-title-effect-one: aquamarine;
+  --color-title-effect-two: silver;
+}
+/*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+*,
+::before,
+::after {
+  box-sizing: border-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #e5e5e5; /* 2 */
+}
+
+/*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+6. Use the user's configured `sans` font-variation-settings by default.
+*/
+html {
+  line-height: 1.5; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  -moz-tab-size: 4; /* 3 */
+  -o-tab-size: 4;
+     tab-size: 4; /* 3 */
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Roboto, "Inter", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"; /* 4 */
+  font-feature-settings: normal; /* 5 */
+  font-variation-settings: normal; /* 6 */
+}
+/*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+body {
+  margin: 0; /* 1 */
+  line-height: inherit; /* 2 */
+}
+/*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+hr {
+  height: 0; /* 1 */
+  color: inherit; /* 2 */
+  border-top-width: 1px; /* 3 */
+}
+/*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+abbr:where([title]) {
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+}
+/*
+Remove the default font size and weight for headings.
+*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+/*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+/*
+Add the correct font weight in Edge and Safari.
+*/
+b,
+strong {
+  font-weight: bolder;
+}
+/*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+code,
+kbd,
+samp,
+pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+/*
+Add the correct font size in all browsers.
+*/
+small {
+  font-size: 80%;
+}
+/*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+/*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+table {
+  text-indent: 0; /* 1 */
+  border-color: inherit; /* 2 */
+  border-collapse: collapse; /* 3 */
+}
+/*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  font-weight: inherit; /* 1 */
+  line-height: inherit; /* 1 */
+  color: inherit; /* 1 */
+  margin: 0; /* 2 */
+  padding: 0; /* 3 */
+}
+/*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+button,
+select {
+  text-transform: none;
+}
+/*
+Use the modern Firefox focus style for all focusable elements.
+*/
+:-moz-focusring {
+  outline: auto;
+}
+/*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+:-moz-ui-invalid {
+  box-shadow: none;
+}
+/*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+progress {
+  vertical-align: baseline;
+}
+/*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+::-webkit-inner-spin-button,
+::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+/*
+Add the correct display in Chrome and Safari.
+*/
+summary {
+  display: list-item;
+}
+/*
+Removes the default spacing and border for appropriate elements.
+*/
+blockquote,
+dl,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+figure,
+p,
+pre {
+  margin: 0;
+}
+fieldset {
+  margin: 0;
+  padding: 0;
+}
+legend {
+  padding: 0;
+}
+
+ul,
+menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+} 
+ol
+{ 
+  margin: 0;
+  padding-left: 20px;
+} 
+/*
+Prevent resizing textareas horizontally by default.
+*/
+textarea {
+  resize: vertical;
+}
+
+
+/*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block; /* 1 */
+  vertical-align: middle; /* 2 */
+}
+/*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+img,
+video {
+  max-width: 100%;
+  height: auto;
+}
+/* Make elements with the HTML hidden attribute stay hidden by default */
+[hidden] {
+  display: none;
+}
+
+:root {
+	--color-inherit: inherit;
+	--color-current: currentColor;
+	--color-transparent: transparent;
+}
+
+
+/* 
+:root {
+		 color: var(--color-base-100);
+		--tw-bg-opacity: 1;
+		 background-color: rgb(21 21 21 / var(--tw-bg-opacity))
+  } 
+*/
+
+select,
+	input,
+	.input {
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		     appearance: none;
+		outline: none;
+		max-width: 100%;
+		border-radius: 0.25rem;
+		border-width: 0px;
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 0.75rem;
+		padding-right: 0.75rem;
+		/* transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 150ms */
+  }
+
+select::-moz-placeholder, input::-moz-placeholder, .input::-moz-placeholder {
+	--tw-text-opacity: 1;
+	color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+select::placeholder,
+	input::placeholder,
+	.input::placeholder {
+	--tw-text-opacity: 1;
+	color: rgb(115 115 115 / var(--tw-text-opacity));
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+html{
+  z-index: -2; 
+  color: var(--color-text-primary);
+	background-attachment: fixed;
+   background-image: var(--bg-image-html); 
+	background-size: cover;
+  background-repeat: no-repeat;
+  height: 100%;
+  background-color: var(--color-bg-image-html-one);  
+  transition-property: all;
+  transition-timing-function: ease-in-out;
+  transition-duration: 2s;
+}
+
+
+
+body{
+  height: 100%;
+  display: grid;
+  grid-auto-flow: row;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+a[href]{
+  color: var(--color-link-unhover);
+  transition: color 500ms ease-in-out;
+}
+
+a[href]:hover{
+  color: var(--color-link-hover);
+  transition: all 100ms ease-in-out;
+}
+
+a[href] img{
+  transition: all 100ms ease-in-out;
+}
+
+a[href] img:hover{
+  transition: all 100ms ease-in-out;
+  opacity: 50%;
+}
+
+
+
+
+
+.topnav__main-navigation-bar,
+.sidebar,
+.welcome-box,
+.contact-info-box,
+.research-box,
+.teaching-box,
+.sci-com-box,
+.cv-box {
+  backdrop-filter: blur(var(--dimension-blur-backdrop));
+  box-shadow: 2px 2px 10px 0px rgb(0, 0, 0, 0.5);
+}
+
+.main-and-sidebar {
+  width: 100%;
+  display: grid;
+  grid-auto-flow: column;
+ }
+
+.sidebar,
+.welcome-box,
+.contact-info-box,
+.research-box,
+.teaching-box,
+.sci-com-box,
+.cv-box {
+  width: fit-content;
+  /* border-color: darkgreen; */
+  border-radius: 2%;
+  /* background-color: rgb(58, 178, 138, 50%); */
+  margin-left: 1%;
+  /* border-width: 1px; */ 
+  padding: 10px;
+}
+
+.welcome-box {
+  max-width:40%;
+  min-width: 280px;
+}
+
+.sidebar {
+  justify-self: end;
+  margin-right: 1%;
+  margin-bottom: auto;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+main {
+  display: grid;
+  grid-auto-flow: row;
+}
+.contact-info-box {
+  margin-top: 10px;
+  justify-self: end;
+}
+
+.contact-info-box figcaption {
+  text-align: center;
+}
+
+
+img{
+  float: center;
+}
+
+p, ul, ol, td {
+  font-weight: 500;
+}
+
+div.topnav__language-bar ul {
+  font-weight: 400;
+}
+
+figure{
+  margin:1px;
+}
+img{
+  /* border-color: darkgreen; */
+  border-radius: 10px;
+}
+
+.welcome-box .container{
+  display: flex;
+  flex-direction: row;
+}
+.welcome-box figure{
+  width: 50%;
+  align-self: flex-start;
+  padding-right: 10px;
+}
+.welcome-box img{
+  width: 100%;
+}
+.welcome-box p{
+  width: 50%;
+  align-self: flex-start;
+}
+
+
+
+/* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+.topnav__main-navigation-bar,
+.topnav__icon-container{
+  overflow: hidden;
+}
+.topnav__main-navigation-bar{
+background-color: var(--color-main-navigation-bar);
+} 
+
+.topnav__main-navigation-bar a {
+  float: left;
+  display: block;
+  color: var(--color-main-navigation-bar-button-unhover);
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 300ms;
+}
+
+.topnav__main-navigation-bar a:hover {
+  background-color: var(--color-main-navigation-bar-button-hover);
+  color: var(--color-text-primary);
+}
+
+.topnav__main-button--active {
+  background-color: var(--color-four);
+  background-color: var(--color-main-navigation-bar-button-active);
+  color: var(--color-text-primary);
+}
+
+.topnav__icon {
+  display: none;
+}
+
+
+@media screen and (max-width: 750px) {
+
+  .main-and-sidebar {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+   }
+
+  .sidebar {
+    order: 2;
+    margin-left: auto;
+  }
+  main {
+    order: 1;
+  }
+
+  .topnav a {
+    display: none;
+  }
+  .topnav a.topnav__icon {
+    float: right;
+    display: block;
+  }
+  .topnav__icon-container {
+    background-color: unset;
+    display: flex;
+    justify-content: right;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive a.topnav__icon {
+    float: none;
+    display: block;
+    text-align: right;
+  }
+  .topnav.responsive .topnav__icon-container {
+    background-color: unset;
+  }
+ .topnav__main-navigation-bar{
+    transition-delay: 0ms;
+    transition-duration: 1000ms;
+    transition-property: height;
+    transition-timing-function: ease;
+    transition-behavior: normal;
+    height: 0px;
+  }
+  
+  .topnav.responsive .topnav__main-navigation-bar{
+    height: calc(5*53.5px);
+    /* each element of the navbar has height 53.5px. Otherwise change 53.5px */
+  }
+  
+  .topnav__main-button--active {
+    background-color: unset;
+    color: var(--color-text-primary);
+  }
+  .topnav.responsive a.topnav__main-button--active {
+    background-color: var(--color-main-navigation-bar-button-active);
+  }
+  .topnav__main-navigation-bar a {
+    transition: none;
+  }
+
+}
+
+
+/*https://www.w3schools.com/howto/howto_css_menu_icon.asp*/
+
+
+.menu-icon {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.menu-icon__bar1, .menu-icon__bar2, .menu-icon__bar3 {
+  width: 30px;
+  height: 4px;
+  background-color: var(--color-main-navigation-bar-bars);
+  backdrop-filter: blur(var(--dimension-blur-backdrop));
+  margin: 4px 0;
+  transition: 0.4s;
+}
+
+.change .menu-icon__bar1 {
+  transform: translate(0, 8px) rotate(-45deg);
+}
+
+.change .menu-icon__bar2 {opacity: 0;}
+
+.change .menu-icon__bar3 {
+  transform: translate(0, -8px) rotate(45deg);
+}
+
+.menu-icon{
+  backdrop-filter: blur(var(--dimension-blur-backdrop));
+  box-shadow: 2px 2px 10px 0px rgb(0, 0, 0, 0.5);
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.topnav__main-navigation-bar {
+  margin-bottom: 1%;
+}
+
+.topnav__language-bar ul {
+  display: flex;
+  justify-content: flex-end;
+}
+.topnav__language-bar ul li {
+  /* margin-left: 5px; */
+  margin-right: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  background-color: rgb(51, 51, 51, 0.5);
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+
+
+
+h1.unloaded {
+  animation: title-effect 6s linear forwards;
+}
+
+@keyframes title-effect {
+  30% {
+    color: var(--color-title-effect-one);
+  }
+
+  60% {
+    color: var(--color-title-effect-two);
+  }
+
+  0%, 100% {
+    color: var(--color-text-primary);
+  }
+}
+
+
+h1{
+  text-align: center;
+  font-size: 300%;
+  font-weight: 700;
+}
+h2{
+  font-size: x-large;
+  font-weight: 800;
+}
+h3{
+  font-size: large;
+  font-weight: 800;
+}
+h4{
+  font-size: medium;
+  font-weight: 600;
+}
+
+h1,h2,h3,h4 {
+  transition-property: border-color, background-color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+
+h2,h3,h4 {
+text-align: center;
+min-width: fit-content;
+max-width: fit-content;
+/* background-color: var(--color-bg-h2); */
+/* border-radius: 10px; */
+ /* border-bottom: 1px solid var(--color-text-primary);
+border-left: 3px solid var(--color-text-primary); */
+margin-top: 10px;
+margin-bottom: 0px;
+/* padding-left: 10px;
+padding-right: 10px; */
+
+}
+h1{
+  margin-left: auto;
+  margin-right: auto;
+}
+h2,h3,h4{
+  margin-left: 0px;
+  margin-right: auto;
+}
+
+/* https://codepen.io/Grienauer/pen/PdPPKZ */
+.separator.unloaded {
+  animation: separator-width 1s ease-out forwards;
+  width: 0;
+}
+
+.separator {
+  width: 100%;
+  border: 0;
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  margin-bottom: 10px;
+}
+
+
+.separator--line{
+  border-bottom: 3px solid var(--color-text-primary);
+}
+.separator--line-medium{
+  border-bottom: 2px solid var(--color-text-primary);
+}
+.separator--line-small{
+  border-bottom: 1px solid var(--color-text-primary);
+}
+
+footer .separator--line {
+  border-color: white;
+}
+@keyframes separator-width {
+  0% {
+    width: 0;
+    margin-left: 50%;
+    margin-left: 50%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+
+
+button {
+ font-size: 15px;
+ font-weight: bold;
+ padding: 0.2rem 0.5rem;
+ transition: all 1s ease-in-out;
+ border-radius: 1rem;
+ cursor: pointer;
+ color: var(--color-fg-toggle-theme);
+ background-color: var(--color-bg-toggle-theme);
+ border: 0.25rem solid var(--color-fg-toggle-theme);
+}
+
+div.toggle-theme-part {
+  display: flex;
+  justify-content: right;
+}
+
+
+
+footer{
+  display: block;
+  justify-self: self-start;
+  /* backdrop-filter: blur(var(--dimension-blur-backdrop)); */
+  background-color: var(--color-main-navigation-bar);
+  color: white;
+  width: 100%;
+  margin-top: 50px;
+  padding-bottom: 20px;
+}
+
+footer p {
+  margin-left: 10px;
+}
+
+td,th {
+  vertical-align: top;
+  text-align: left;
+}
+td {
+  padding-left: 20px;
+}
+
+strong,th {
+  font-weight: 800;
+}
+
+#Link_NimVar a{
+  display: none;
+}

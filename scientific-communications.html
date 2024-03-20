@@ -1,0 +1,244 @@
+﻿<!doctype html>
+<html data-theme="empty" lang="en-US">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Konstantinos Bessas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content=" "
+    >
+    <link rel="icon" href="Icona.svg" type="image/x-icon">
+    <!-- https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup -->
+    <script src="Loaded.js"></script>
+    <script src="navbar.js"></script>
+    <script src="icon_navbar.js"></script>
+    <script src="language.js"></script>
+    <script src="toggleTheme.js" async></script>
+    <script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <title>
+      Scientific communications
+    </title>
+  </head>
+  <body onclick="Loaded()">
+    <div class="toggle-theme-part">
+      <button type="button" data-theme-toggle aria-label="Change to light theme">
+        ⌛
+      </button>
+    </div><!--toggle-theme-part-->
+    <header>
+      <h1 id="main-title" data-i18n="Scientific_Communications_main-navigation-bar" class="unloaded"></h1>
+    </header>  
+    <!-- https://medium.com/@nohanabil/building-a-multilingual-static-website-a-step-by-step-guide-7af238cc8505 -->
+    <div class="topnav" id="main-navigation-bar">
+      <div class="topnav__icon-container">
+        <a href="javascript:void(0);" class="topnav__icon" onclick="ResponsiveNavbar()">
+          <div class="menu-icon" onclick="ToggleIconNavbar(this)">
+            <div class="menu-icon__bar1"></div>
+            <div class="menu-icon__bar2"></div>
+            <div class="menu-icon__bar3"></div>
+          </div>
+        </a>
+      </div>
+      <div class="topnav__language-bar">
+        <ul>
+          <li><a href="" onclick="changeLanguage('en')">EN</a></li>
+          <li><a href="" onclick="changeLanguage('it')">IT</a></li>
+        </ul>
+      </div>
+      <nav class="topnav__main-navigation-bar">
+        <a href="index.html" class="topnav__main-button">
+          <span data-i18n="Home_main-navigation-bar"></span>
+        </a>
+        <a href="research.html" class="topnav__main-button">
+          <span data-i18n="Research_main-navigation-bar"></span>
+        </a>
+        <a href="curriculum.html" class="topnav__main-button">
+          <span data-i18n="Curriculum_main-navigation-bar"></span>
+        </a>
+        <a href="teaching.html" class="topnav__main-button">
+          <span data-i18n="Teaching_main-navigation-bar"></span>
+        </a>
+        <a href="scientific-communications.html" class="topnav__main-button topnav__main-button--active">
+          <span data-i18n="Scientific_Communications_main-navigation-bar"></span>
+        </a>
+      </nav>   
+    </div><!--topnav-->   
+    <div class="main-and-sidebar">
+      <main>
+        <div class="sci-com-box">
+          <h2 data-i18n="Organization"></h2>
+          <hr class="separator separator--line-medium unloaded">
+          <table>
+            <tr>
+              <th>(24 - 25) 01/2024</th>
+              <td>
+                <span data-i18n="INARIMAT2024_one"></span><a target="_blank" href="https://matematica.unipv.it/avvisi/incontro-annuale-dei-ricercatori-in-matematica-unipv/">“Incontro Annuale dei Ricercatori in Matematica UNIPV”</a>.<br>
+                <span data-i18n="INARIMAT2024_two"></span>.
+              </td>
+            </tr>
+            <tr>
+              <th><span data-i18n="Nov"></span> 2021 – <span data-i18n="Jan"></span> 2023</th>
+              <td>
+                <span data-i18n="MAP2_one"></span> <a target="_blank" href="https://www.dm.unipi.it/research/list-seminar-activities/seminari-map/">“Seminari MAP: Metodi per l’Analisi e la Probabilità”</a><br>
+                <span data-i18n="MAP2_two"></span>.<br>
+              </td>
+            </tr>
+            <tr>
+              <th>Mar 2021 – Nov 2021</th>
+              <td>
+                <span data-i18n="MAP1_one"></span> <a target="_blank" href="https://www.dm.unipi.it/research/list-seminar-activities/seminari-map/">“Seminari MAP: Metodi per l’Analisi e la Probabilità”</a><br>
+                <span data-i18n="MAP1_two"></span>.
+              </td>
+            </tr>
+          </table>
+          <h2 data-i18n="Talks"></h2>
+          <hr class="separator separator--line-medium unloaded">
+          <h3 data-i18n="Invited_Talks"></h3>
+          <hr class="separator separator--line-small unloaded">
+          <table>
+            <tr>
+              <th>20/10/2023</th>
+              <td>
+                <strong>On the Shape of Small Liquid Drops Minimizing Nonlocal Energies</strong><br>
+                SHSU Analysis Seminar<br>
+                Sam Houston State University, (online)
+              </td>
+            </tr>
+            <tr>
+              <th>04/07/2023</th>
+              <td>
+                <a target="_blank" href="https://seminarimap.wixsite.com/seminarimap/articoli/konstantinos-bessas"><strong>Long-range interactions in configurations of liquid droplets at equilibrium</strong></a><br>
+                Seminari MAP: Metodi per l’Analisi e la Probabilità<br>
+                University of Pisa
+              </td>
+            </tr>
+            <tr>
+              <th>03/04/2023</th>
+              <td>
+                <a target="_blank" href="https://matematica.unipv.it/events/nonlocal-total-variation-denoising-model-with-weighted-l1-fidelity/?occurrence=2023-04-03"><strong>Nonlocal total variation denoising model with weighted $L^1$ fidelity</strong></a><br>
+                Seminari di Matematica Applicata<br>
+                University of Pavia
+              </td>
+            </tr>
+            <tr>
+              <th>27/03/2023</th>
+              <td>
+                <a target="_blank" href="https://www.google.com/calendar/event?eid=MG40a2tiM2xkNzdibmhzZDBxMGt0cWpyZG0gZjc5YzkxajV0MmhsMHZsaHM1NmRvbjk1OWdAZw&ctz=Europe/Rome"><strong>Nonlocal total variation denoising model with weighted $L^1$ fidelity</strong></a><br>
+                Seminario di Analisi<br>
+                University of Naples Federico II
+              </td>
+            </tr>
+            <tr>
+              <th>25/11/2022</th>
+              <td>
+                <a target="_blank" href="https://events.dm.unipi.it/event/126/contributions/317/"><strong>Fractional total variation denoising model with $L^1$ fidelity</strong></a><br>
+                Weekend di lavoro su Calcolo delle Variazioni<br>
+                Grand Hotel Tettuccio, Montecatini Terme (Pistoia)
+              </td>
+            </tr>
+            <tr>
+              <th>02/06/2022</th>
+              <td>
+                <a target="_blank" href="https://wochenprogramm.mathematik.uni-freiburg.de/abstract.html?l=en&LetzteSeite=woche&LfdNr=34&Semester=SS2022"><strong>Fractional total variation denoising model with $L^1$ fidelity</strong></a><br>
+                Oberseminar<br>
+                University of Freiburg
+              </td>
+            </tr>
+          </table> 
+          <h3 data-i18n="Contributed_Talks"></h3>
+          <hr class="separator separator--line-small unloaded">
+          <table>
+            <tr>
+              <th>24/01/2024</th>
+              <td>
+                <a target="_blank" href="https://matematica.unipv.it/avvisi/incontro-annuale-dei-ricercatori-in-matematica-unipv/"><strong>Dealing with a nonlocal world from a variational perspective</strong></a><br>
+                Incontro Annuale dei Ricercatori in Matematica UNIPV<br>
+                University of Pavia
+              </td>
+            </tr>
+            <tr>
+              <th>19/09/2023</th>
+              <td>
+                <a target="_blank" href="https://sites.google.com/view/soifi23/home"><strong>Non-local BV functions and a denoising model with $L^1$ fidelity</strong></a><br>
+                Shape Optimization, Isoperimetric and Functional Inequalities<br>
+                Bellavista Relax Hotel, Levico Terme (Trento)
+              </td>
+            </tr>
+          </table>
+          <h3>Posters</h3>
+          <hr class="separator separator--line-small unloaded">
+          <table>
+            <tr>
+              <th>11/07/2023</th>
+              <td>
+                <a target="_blank"><strong>Fractional total variation denoising model with $L^1$ fidelity</strong></a><br>
+                Hausdorff School: "Analysis of PDEs: Variational and Geometric Perspectives"<br>
+                Hausdorff Center for Mathematics, Bonn
+              </td>
+            </tr>
+            <tr>
+              <th>04/10/2022</th>
+              <td>
+                <a target="_blank"><strong>Fractional total variation denoising model with $L^1$ fidelity</strong></a><br>
+                Nonlocality: Analysis, Numerics and Applications<br>
+                Lorentz Center, Leiden
+              </td>
+            </tr>
+          </table>
+        </div>
+      </main>
+      <div class="sidebar">
+        <h2 data-i18n="Links"></h2>
+        <ul>
+          <li id="Link_NimVar">
+            <a target="_blank" href="NimVar/index.html">
+              <img
+              src="images/NimVar_Logo.png"
+              alt="NimVar-Logo"
+              width="100"
+              >
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://orcid.org/0000-0001-6810-3741">
+              ORCID
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://www.researchgate.net/profile/Konstantinos-Bessas">
+              ResearchGate
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://arxiv.org/search/math?query=Bessas%2C+Konstantinos&searchtype=author&abstracts=show&order=-announced_date_first&size=50">
+              arXiv
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://cvgmt.sns.it/person/2715/">
+              CVGMT
+            </a>
+          </li>
+        </ul>
+      </div><!--sidebar--> 
+    </div>
+    <footer>
+      <hr class="separator separator--line">
+      <p>
+        Konstantinos Bessas<br>
+        Dipartimento di Matematica<br> 
+        Università degli Studi di Pavia<br>
+        via Ferrata, 5 - 27100 Pavia (Italia)<br>
+      </p> 
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+﻿<!doctype html>
+<html data-theme="empty" lang="en-US">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Konstantinos Bessas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content=" "
+    >
+    <link rel="icon" href="Icona.svg" type="image/x-icon">
+    <!-- https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup -->
+    <script src="Loaded.js"></script>
+    <script src="navbar.js"></script>
+    <script src="icon_navbar.js"></script>
+    <script src="language.js"></script>
+    <script src="toggleTheme.js" async></script>
+    <script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <title>
+      Research
+    </title>
+  </head>
+  <body onclick="Loaded()">
+    <div class="toggle-theme-part">
+      <button type="button" data-theme-toggle aria-label="Change to light theme">
+        ⌛
+      </button>
+    </div><!--toggle-theme-part-->
+    <header>
+      <h1 id="main-title" class="unloaded" data-i18n="research_title"></h1>
+    </header>  
+    <!-- https://medium.com/@nohanabil/building-a-multilingual-static-website-a-step-by-step-guide-7af238cc8505 -->
+    <div class="topnav" id="main-navigation-bar">
+      <div class="topnav__icon-container">
+        <a href="javascript:void(0);" class="topnav__icon" onclick="ResponsiveNavbar()">
+          <div class="menu-icon" onclick="ToggleIconNavbar(this)">
+            <div class="menu-icon__bar1"></div>
+            <div class="menu-icon__bar2"></div>
+            <div class="menu-icon__bar3"></div>
+          </div>
+        </a>
+      </div>
+      <div class="topnav__language-bar">
+        <ul>
+          <li><a href="" onclick="changeLanguage('en')">EN</a></li>
+          <li><a href="" onclick="changeLanguage('it')">IT</a></li>
+        </ul>
+      </div>
+      <nav class="topnav__main-navigation-bar">
+        <a href="index.html" class="topnav__main-button">
+          <span data-i18n="Home_main-navigation-bar"></span>
+        </a>
+        <a href="research.html" class="topnav__main-button topnav__main-button--active">
+          <span data-i18n="Research_main-navigation-bar"></span>
+        </a>
+        <a href="curriculum.html" class="topnav__main-button">
+          <span data-i18n="Curriculum_main-navigation-bar"></span>
+        </a>
+        <a href="teaching.html" class="topnav__main-button">
+          <span data-i18n="Teaching_main-navigation-bar"></span>
+        </a>
+        <a href="scientific-communications.html" class="topnav__main-button">
+          <span data-i18n="Scientific_Communications_main-navigation-bar"></span>
+        </a>
+      </nav>   
+    </div><!--topnav-->   
+    <div class="main-and-sidebar">
+      <main>
+        <div class="research-box">
+          <h2 data-i18n="Research_Interests"></h2>
+          <hr class="separator separator--line-medium unloaded">
+            <ul>
+              <li data-i18n="CALCVAR"></li>
+              <li data-i18n="NONLOCAL_INTERACTIONS"></li>
+              <li data-i18n="ISO_PB"></li>
+              <li data-i18n="G_PDEs"></li>
+              <li data-i18n="IMAGE_PROCESSING"></li>
+            </ul>
+            <h2 data-i18n="Coauthors"></h2>
+            <hr class="separator separator--line-medium unloaded">
+            <ul>
+              <li>
+                <a target="_blank" href="https://fumiono.gitlab.io/cv_fumi_onoue/#top">Fumihiko Onoue</a>
+              </li>
+              <li>
+                <a target="_blank" href="http://people.dm.unipi.it/novaga/">Matteo Novaga</a>
+              </li>
+              <li>
+                <a target="_blank" href="https://giorgiostefani.weebly.com/">Giorgio Stefani</a>
+              </li>
+            </ul>
+            <h2 data-i18n="Papers"></h2>
+            <hr class="separator separator--line-medium unloaded">
+            <p>
+              <span data-i18n="Papers_message_1"></span> <a target="_blank" href="http://cvgmt.sns.it/person/2715/">CVGMT</a> <span data-i18n="Papers_message_2"></span> <a target="_blank" href="https://arxiv.org/search/math?query=Bessas%2C+Konstantinos&searchtype=author&abstracts=show&order=-announced_date_first&size=50">arXiv</a>.
+            </p>
+            <h3 data-i18n="Publications"></h3>
+            <hr class="separator separator--line-small">
+            <ol reversed>
+              <li>
+                <a target="_blank" href="https://doi.org/10.1515/acv-2023-0082">Non-local $BV$ functions and a denoising model with $L^1$ fidelity</a><br>
+                K. Bessas <span data-i18n="et"></span> G. Stefani<br>
+                <i>Adv. Calc. Var.</i>
+                (2024)
+                (Ahead of Print)
+              </li>
+              <li>
+                <a target="_blank" href="http://dx.doi.org/10.1051/cocv/2023080">On the shape of small liquid drops minimizing nonlocal energies</a><br>
+                K. Bessas, M. Novaga <span data-i18n="et"></span> F. Onoue<br>
+                <i>ESAIM Control Optim. Calc. Var.</i>
+                (2023)
+                vol. 29, n. 86, 26 pp.  
+              </li>
+              <li>
+                <a target="_blank" href="http://dx.doi.org/https://doi.org/10.1016/j.na.2022.112926">Fractional total variation denoising model with $L^1$ fidelity</a><br>
+                K. Bessas<br>
+                <i>Nonlinear Analysis</i>
+                (2022)
+                vol. 222, n. 112926, 20 pp.
+              </li>             
+            </ol>
+        </div>
+      </main>
+      <div class="sidebar">
+        <h2 data-i18n="Links"></h2>
+        <ul>
+          <li id="Link_NimVar">
+            <a target="_blank" href="NimVar/index.html">
+              <img
+              src="images/NimVar_Logo.png"
+              alt="NimVar-Logo"
+              width="100"
+              >
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://orcid.org/0000-0001-6810-3741">
+              ORCID
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://www.researchgate.net/profile/Konstantinos-Bessas">
+              ResearchGate
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="https://arxiv.org/search/math?query=Bessas%2C+Konstantinos&searchtype=author&abstracts=show&order=-announced_date_first&size=50">
+              arXiv
+            </a>
+          </li>
+          <li>
+            <a target="_blank" href="http://cvgmt.sns.it/person/2715/">
+              CVGMT
+            </a>
+          </li>
+        </ul>
+      </div><!--sidebar--> 
+    </div>
+    <footer>
+      <hr class="separator separator--line">
+      <p>
+        Konstantinos Bessas<br>
+        Dipartimento di Matematica<br> 
+        Università degli Studi di Pavia<br>
+        via Ferrata, 5 - 27100 Pavia (Italia)<br>
+      </p> 
+    </footer>
+  </body>
+</html>
