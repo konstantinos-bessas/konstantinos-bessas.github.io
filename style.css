@@ -31,7 +31,7 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --bg-image-html: url(images/background50.png);
-  --bg-image-html-mobile: url(images/background50Mobile.svg);
+  --bg-image-html-mobile: url(images/background50Mobile.svg);/* Foto di <a href="https://unsplash.com/it/@shambam?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sam 🐷</a> su <a href="https://unsplash.com/it/foto/specchio-dacqua-blu-sotto-il-cielo-blu-e-bianco-durante-il-giorno-ueGaQiHV86o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
   --color-title-effect-one: var(--color-one);
   --color-title-effect-two: var(--color-two);
 }
@@ -61,7 +61,7 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --bg-image-html: url(images/background25dark.png);
-  --bg-image-html-mobile: url(images/background25darkMobile.svg);
+  --bg-image-html-mobile: url(images/background25darkMobile.svg); /* Foto di <a href="https://unsplash.com/it/@shambam?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sam 🐷</a> su <a href="https://unsplash.com/it/foto/specchio-dacqua-blu-sotto-il-cielo-blu-e-bianco-durante-il-giorno-ueGaQiHV86o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
   --color-title-effect-one: aquamarine;
   --color-title-effect-two: silver;
 }
