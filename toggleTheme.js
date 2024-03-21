@@ -26,9 +26,9 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
     // and using a sun/moon icon, for example
     buttonEl.setAttribute("aria-label", newCta);
     if (newCta == "Change to light theme") {
-      buttonEl.innerText = "🌙";
+      // buttonEl.innerText = "🌙";
     } else {
-      buttonEl.innerText = "☀️";
+      // buttonEl.innerText = "☀️";
     }
     
   }

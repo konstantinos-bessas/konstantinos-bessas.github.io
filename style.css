@@ -31,7 +31,7 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --bg-image-html: url(images/background50.png);
-  --bg-image-html-mobile: url(images/background50Mobile.svg);/* Foto di <a href="https://unsplash.com/it/@shambam?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sam 🐷</a> su <a href="https://unsplash.com/it/foto/specchio-dacqua-blu-sotto-il-cielo-blu-e-bianco-durante-il-giorno-ueGaQiHV86o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
+  --bg-image-html-mobile: url(images/background50Mobile.svg); 
   --color-title-effect-one: var(--color-one);
   --color-title-effect-two: var(--color-two);
 }
@@ -61,7 +61,8 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --bg-image-html: url(images/background25dark.png);
-  --bg-image-html-mobile: url(images/background25darkMobile.svg); /* Foto di <a href="https://unsplash.com/it/@shambam?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Sam 🐷</a> su <a href="https://unsplash.com/it/foto/specchio-dacqua-blu-sotto-il-cielo-blu-e-bianco-durante-il-giorno-ueGaQiHV86o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
+  --bg-image-html-mobile: url(images/background25darkMobile.svg); /*Foto di <a href="https://unsplash.com/it/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> su <a href="https://unsplash.com/it/foto/tessuto-nero-in-primo-piano-fotografia-6a3nqQ1YwBw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
+  
   --color-title-effect-one: aquamarine;
   --color-title-effect-two: silver;
 }
@@ -594,6 +595,7 @@ background-color: var(--color-main-navigation-bar);
     background-image: var(--bg-image-html-mobile); 
     background-repeat: repeat;
     height: 100%;
+    transition: none;
   }
 }
 
@@ -726,10 +728,10 @@ background-color: var(--color-main-navigation-bar);
 
 
 
-
+/* 
 h1.unloaded {
   animation: title-effect 6s linear forwards;
-}
+} */
 
 @keyframes title-effect {
   30% {
@@ -793,18 +795,27 @@ h2,h3,h4{
   margin-right: auto;
 }
 
-/* https://codepen.io/Grienauer/pen/PdPPKZ */
+
+@media screen and (min-width: 750px) {
+  /* https://codepen.io/Grienauer/pen/PdPPKZ */
 .separator.unloaded {
   animation: separator-width 1s ease-out forwards;
   width: 0;
+}
+.separator {
+  transition-property: all;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+}
+ button {
+  transition: all 1s ease-in-out;
+ }  
 }
 
 .separator {
   width: 100%;
   border: 0;
-  transition-property: all;
-  transition-duration: 2s;
-  transition-timing-function: linear;
+  
   margin-bottom: 10px;
 }
 
@@ -839,12 +850,12 @@ button {
  font-size: 15px;
  font-weight: bold;
  padding: 0.2rem 0.5rem;
- transition: all 1s ease-in-out;
- border-radius: 1rem;
+ border-radius: 0.5rem;
  cursor: pointer;
  color: var(--color-fg-toggle-theme);
- background-color: var(--color-bg-toggle-theme);
- border: 0.25rem solid var(--color-fg-toggle-theme);
+ /* background-color: var(--color-bg-toggle-theme); */
+ background-color: transparent;
+ /* border: 0.25rem solid var(--color-fg-toggle-theme); */
 }
 
 div.toggle-theme-part {
