@@ -53,9 +53,9 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
     location.reload(); 
   }
   const localStorageTheme = localStorage.getItem("theme");
-  if(localStorageTheme == null){
-    location.reload(); 
-  }
+  // if(localStorageTheme == null){
+  //   location.reload(); 
+  // }
   const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
   if(systemSettingDark == null){
     location.reload(); 
