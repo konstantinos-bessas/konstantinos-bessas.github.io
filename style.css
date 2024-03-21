@@ -31,7 +31,7 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --bg-image-html: url(images/background50.png);
-  --bg-image-html-mobile: url(images/background50Mobile.svg); 
+  --bg-image-html-mobile: url(images/background50Mobile.png); /*Foto di <a href="https://unsplash.com/it/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> su <a href="https://unsplash.com/it/foto/tessuto-nero-in-primo-piano-fotografia-6a3nqQ1YwBw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
   --color-title-effect-one: var(--color-one);
   --color-title-effect-two: var(--color-two);
 }
@@ -61,7 +61,7 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --bg-image-html: url(images/background25dark.png);
-  --bg-image-html-mobile: url(images/background25darkMobile.svg); /*Foto di <a href="https://unsplash.com/it/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> su <a href="https://unsplash.com/it/foto/tessuto-nero-in-primo-piano-fotografia-6a3nqQ1YwBw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
+  --bg-image-html-mobile: url(images/background25darkMobile.png); /*Foto di <a href="https://unsplash.com/it/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> su <a href="https://unsplash.com/it/foto/tessuto-nero-in-primo-piano-fotografia-6a3nqQ1YwBw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
   
   --color-title-effect-one: aquamarine;
   --color-title-effect-two: silver;
@@ -396,30 +396,26 @@ select::placeholder,
 
 
 
-      
 
 
 
-html{
-  z-index: -2; 
-  color: var(--color-text-primary);
-	background-attachment: fixed;
-   background-image: var(--bg-image-html); 
-	background-size: cover;
-  background-repeat: no-repeat;
+
+
+ /* For mobile: */
+
+ html{
+  background-attachment: scroll;
+  background-image: var(--bg-image-html-mobile); 
+  background-size: cover;
+  background-repeat: repeat;
   height: 100%;
   background-color: var(--color-bg-image-html-one);  
-  transition-property: all;
-  transition-timing-function: ease-in-out;
-  transition-duration: 2s;
+  transition: none;
+  z-index: -2; 
+    color: var(--color-text-primary);
 }
-
-
-
 body{
   height: 100%;
-  display: grid;
-  grid-auto-flow: row;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -427,37 +423,14 @@ body{
 
 a[href]{
   color: var(--color-link-unhover);
-  transition: color 500ms ease-in-out;
 }
 
 a[href]:hover{
   color: var(--color-link-hover);
-  transition: all 100ms ease-in-out;
-}
-
-a[href] img{
-  transition: all 100ms ease-in-out;
 }
 
 a[href] img:hover{
-  transition: all 100ms ease-in-out;
   opacity: 50%;
-}
-
-
-
-
-
-.topnav__main-navigation-bar,
-.sidebar,
-.welcome-box,
-.contact-info-box,
-.research-box,
-.teaching-box,
-.sci-com-box,
-.cv-box {
-  backdrop-filter: blur(var(--dimension-blur-backdrop));
-  box-shadow: 2px 2px 10px 0px rgb(0, 0, 0, 0.5);
 }
 
 .main-and-sidebar {
@@ -547,14 +520,13 @@ img{
 }
 
 
-
 /* https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
 .topnav__main-navigation-bar,
 .topnav__icon-container{
   overflow: hidden;
 }
 .topnav__main-navigation-bar{
-background-color: var(--color-main-navigation-bar);
+  background-color: var(--color-main-navigation-bar);
 } 
 
 .topnav__main-navigation-bar a {
@@ -566,8 +538,8 @@ background-color: var(--color-main-navigation-bar);
   text-decoration: none;
   font-size: 17px;
   transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
-	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-	transition-duration: 300ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
 }
 
 .topnav__main-navigation-bar a:hover {
@@ -583,20 +555,6 @@ background-color: var(--color-main-navigation-bar);
 
 .topnav__icon {
   display: none;
-}
-
-
-
-
-
-@media screen and (max-width: 800px) {
-  html{
-    background-attachment: scroll;
-    background-image: var(--bg-image-html-mobile); 
-    background-repeat: repeat;
-    height: 100%;
-    transition: none;
-  }
 }
 
 
@@ -673,7 +631,6 @@ background-color: var(--color-main-navigation-bar);
 
 }
 
-
 /*https://www.w3schools.com/howto/howto_css_menu_icon.asp*/
 
 
@@ -686,9 +643,9 @@ background-color: var(--color-main-navigation-bar);
   width: 30px;
   height: 4px;
   background-color: var(--color-main-navigation-bar-bars);
-  backdrop-filter: blur(var(--dimension-blur-backdrop));
+  /* backdrop-filter: blur(var(--dimension-blur-backdrop)); */
   margin: 4px 0;
-  transition: 0.4s;
+  /* transition: 0.4s; */
 }
 
 .change .menu-icon__bar1 {
@@ -725,28 +682,6 @@ background-color: var(--color-main-navigation-bar);
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
 }
-
-
-
-/* 
-h1.unloaded {
-  animation: title-effect 6s linear forwards;
-} */
-
-@keyframes title-effect {
-  30% {
-    color: var(--color-title-effect-one);
-  }
-
-  60% {
-    color: var(--color-title-effect-two);
-  }
-
-  0%, 100% {
-    color: var(--color-text-primary);
-  }
-}
-
 
 h1{
   text-align: center;
@@ -796,22 +731,6 @@ h2,h3,h4{
 }
 
 
-@media screen and (min-width: 750px) {
-  /* https://codepen.io/Grienauer/pen/PdPPKZ */
-.separator.unloaded {
-  animation: separator-width 1s ease-out forwards;
-  width: 0;
-}
-.separator {
-  transition-property: all;
-  transition-duration: 2s;
-  transition-timing-function: linear;
-}
- button {
-  transition: all 1s ease-in-out;
- }  
-}
-
 .separator {
   width: 100%;
   border: 0;
@@ -833,65 +752,184 @@ h2,h3,h4{
 footer .separator--line {
   border-color: white;
 }
-@keyframes separator-width {
-  0% {
-    width: 0;
-    margin-left: 50%;
-    margin-left: 50%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-
 
 button {
- font-size: 15px;
- font-weight: bold;
- padding: 0.2rem 0.5rem;
- border-radius: 0.5rem;
- cursor: pointer;
- color: var(--color-fg-toggle-theme);
- /* background-color: var(--color-bg-toggle-theme); */
- background-color: transparent;
- /* border: 0.25rem solid var(--color-fg-toggle-theme); */
+  font-size: 15px;
+  font-weight: bold;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  color: var(--color-fg-toggle-theme);
+  /* background-color: var(--color-bg-toggle-theme); */
+  background-color: transparent;
+  /* border: 0.25rem solid var(--color-fg-toggle-theme); */
+ }
+ 
+ div.toggle-theme-part {
+   display: flex;
+   justify-content: right;
+ }
+ 
+ footer{
+   display: block;
+   justify-self: self-start;
+   /* backdrop-filter: blur(var(--dimension-blur-backdrop)); */
+   background-color: var(--color-main-navigation-bar);
+   color: white;
+   width: 100%;
+   margin-top: 50px;
+   padding-bottom: 20px;
+ }
+ 
+ footer p {
+   margin-left: 10px;
+ }
+ 
+ td,th {
+   vertical-align: top;
+   text-align: left;
+ }
+ td {
+   padding-left: 20px;
+ }
+ 
+ strong,th {
+   font-weight: 800;
+ }
+ 
+ #Link_NimVar a{
+   display: none;
+ }
+
+@media only screen and (min-width: 750px) {
+  /* For desktop: */
+
+
+  
+
+
+
+
+  html{
+    
+    background-attachment: fixed;
+    background-image: var(--bg-image-html); 
+    background-repeat: no-repeat;
+    transition-property: all;
+    transition-timing-function: ease-in-out;
+    transition-duration: 2s;
+  }
+
+  a[href]{
+    transition: color 500ms ease-in-out;
+  }
+  
+  a[href]:hover{
+    transition: all 100ms ease-in-out;
+  }
+  
+  a[href] img{
+    transition: all 100ms ease-in-out;
+  }
+  
+  a[href] img:hover{
+    transition: all 100ms ease-in-out;
+  }
+
+  .topnav__main-navigation-bar,
+  .sidebar,
+  .welcome-box,
+  .contact-info-box,
+  .research-box,
+  .teaching-box,
+  .sci-com-box,
+  .cv-box {
+    backdrop-filter: blur(var(--dimension-blur-backdrop));
+    box-shadow: 2px 2px 10px 0px rgb(0, 0, 0, 0.5);
+  }
+
+    /* https://codepen.io/Grienauer/pen/PdPPKZ */
+  .separator.unloaded {
+    animation: separator-width 1s ease-out forwards;
+    width: 0;
+  }
+  .separator {
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+  }
+  button {
+    transition: all 1s ease-in-out;
+  } 
+  
+  @keyframes separator-width {
+    0% {
+      width: 0;
+      margin-left: 50%;
+      margin-left: 50%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+
+
 }
 
-div.toggle-theme-part {
-  display: flex;
-  justify-content: right;
-}
 
 
 
-footer{
-  display: block;
-  justify-self: self-start;
-  /* backdrop-filter: blur(var(--dimension-blur-backdrop)); */
-  background-color: var(--color-main-navigation-bar);
-  color: white;
-  width: 100%;
-  margin-top: 50px;
-  padding-bottom: 20px;
-}
 
-footer p {
-  margin-left: 10px;
-}
 
-td,th {
-  vertical-align: top;
-  text-align: left;
-}
-td {
-  padding-left: 20px;
-}
 
-strong,th {
-  font-weight: 800;
-}
 
-#Link_NimVar a{
-  display: none;
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+h1.unloaded {
+  animation: title-effect 6s linear forwards;
+} */
+
+/* @keyframes title-effect {
+  30% {
+    color: var(--color-title-effect-one);
+  }
+
+  60% {
+    color: var(--color-title-effect-two);
+  }
+
+  0%, 100% {
+    color: var(--color-text-primary);
+  }
+} */
+
+
+
+
+
+
+
+
+
