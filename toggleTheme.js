@@ -59,7 +59,12 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
         check();
     }, 500);
   };
-  check();
+  let n=0
+  while(n<20){
+    check();
+    n=n+1;
+  }
+  
 
   button = document.querySelector("[data-theme-toggle]");
   
