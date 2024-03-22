@@ -44,11 +44,16 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
   /**
   * On page load:
   */
-  window.addEventListener('load', function () {
-  })  
+  // window.addEventListener('load', function () {
+  // })  
   /**
   * 1. Grab what we need from the DOM and system settings on page load
   */
+  while (true) {
+    if (document.querySelector("[data-theme-toggle]")!=null) {
+      break;
+    }
+  }
   const button = document.querySelector("[data-theme-toggle]");
   // if(button == null){
   //   location.reload(); 
