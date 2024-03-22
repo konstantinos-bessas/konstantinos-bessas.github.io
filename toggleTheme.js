@@ -54,10 +54,12 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
   
   let check = function() {
     setTimeout(function () {
-      if (button === null)
-        check();
-      else {
+      if (button === null){
         button = document.querySelector("[data-theme-toggle]");        
+        check();
+      }
+      else {
+        
         // if(button == null){
         //   location.reload(); 
         // }
@@ -94,7 +96,7 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
           currentThemeSetting = newTheme;
         });
       }
-    }, 200);
+    }, 100);
   };
   window.addEventListener('load', check())
   
