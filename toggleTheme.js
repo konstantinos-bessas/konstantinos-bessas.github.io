@@ -57,49 +57,46 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
     setTimeout(function () {
       if (button === null)
         check();
-    }, 500);
+      else {
+        button = document.querySelector("[data-theme-toggle]");        
+        // if(button == null){
+        //   location.reload(); 
+        // }
+        const localStorageTheme = localStorage.getItem("theme");
+        // if(localStorageTheme == null){
+        //   location.reload(); 
+        // }
+        const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
+        // if(systemSettingDark == null){
+        //   location.reload(); 
+        // }
+
+        /**
+        * 2. Work out the current site settings
+        */
+        let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
+        
+        /**
+        * 3. Update the theme setting and button text according to current settings
+        */
+        updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
+        updateThemeOnHtmlEl({ theme: currentThemeSetting });
+        
+        /**
+        * 4. Add an event listener to toggle the theme
+        */
+        button.addEventListener("click", (event) => {
+          const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
+        
+          localStorage.setItem("theme", newTheme);
+          updateButton({ buttonEl: button, isDark: newTheme === "dark" });
+          updateThemeOnHtmlEl({ theme: newTheme });
+        
+          currentThemeSetting = newTheme;
+        });
+      }
+    }, 200);
   };
-  let n=0
-  while(n<20){
-    check();
-    n=n+1;
-  }
-  
+  check();
 
-  button = document.querySelector("[data-theme-toggle]");
-  
-  // if(button == null){
-  //   location.reload(); 
-  // }
-  const localStorageTheme = localStorage.getItem("theme");
-  // if(localStorageTheme == null){
-  //   location.reload(); 
-  // }
-  const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-  // if(systemSettingDark == null){
-  //   location.reload(); 
-  // }
-
-  /**
-  * 2. Work out the current site settings
-  */
-  let currentThemeSetting = calculateSettingAsThemeString({ localStorageTheme, systemSettingDark });
-  
-  /**
-  * 3. Update the theme setting and button text according to current settings
-  */
-  updateButton({ buttonEl: button, isDark: currentThemeSetting === "dark" });
-  updateThemeOnHtmlEl({ theme: currentThemeSetting });
-  
-  /**
-  * 4. Add an event listener to toggle the theme
-  */
-  button.addEventListener("click", (event) => {
-    const newTheme = currentThemeSetting === "dark" ? "light" : "dark";
-  
-    localStorage.setItem("theme", newTheme);
-    updateButton({ buttonEl: button, isDark: newTheme === "dark" });
-    updateThemeOnHtmlEl({ theme: newTheme });
-  
-    currentThemeSetting = newTheme;
-  }); 
+   
