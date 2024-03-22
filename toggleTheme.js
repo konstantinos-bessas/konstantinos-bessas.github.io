@@ -44,8 +44,7 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
   /**
   * On page load:
   */
-   window.addEventListener('load', function () {
-   })  
+     
   /**
   * 1. Grab what we need from the DOM and system settings on page load
   */
@@ -97,6 +96,7 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
       }
     }, 200);
   };
-  check();
+  window.addEventListener('load', check())
+  
 
    
