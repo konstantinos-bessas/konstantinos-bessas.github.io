@@ -19,6 +19,7 @@
   --color-six:rgba(193, 132, 28, 0.8);
   --color-seven: #ffee0070;
   --color-eight:#9c870faf;
+  --color-nine: grey;
   --color-bg-h2: var(--color-eight);
   --color-link-unhover: var(--color-one);
 	--color-link-hover: var(--color-two);
@@ -30,6 +31,7 @@
   --color-bg-toggle-theme: var(--color-five);
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
+  --color-bg-image-html-one-mobile: var(--color-nine);
   --bg-image-html: url(images/background50.png);
   --bg-image-html-mobile: url(images/background50Mobile.png); /*Foto di <a href="https://unsplash.com/it/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> su <a href="https://unsplash.com/it/foto/tessuto-nero-in-primo-piano-fotografia-6a3nqQ1YwBw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
   --color-title-effect-one: var(--color-one);
@@ -60,6 +62,7 @@
   --color-bg-toggle-theme: var(--color-five);
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
+  --color-bg-image-html-one-mobile: var(--color-seven);
   --bg-image-html: url(images/background25dark.png);
   --bg-image-html-mobile: url(images/background25darkMobile.png); /*Foto di <a href="https://unsplash.com/it/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> su <a href="https://unsplash.com/it/foto/tessuto-nero-in-primo-piano-fotografia-6a3nqQ1YwBw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
   
@@ -409,7 +412,7 @@ select::placeholder,
   background-size: cover;
   background-repeat: repeat;
   height: 100%;
-  background-color: var(--color-bg-image-html-one);  
+  background-color: var(--color-bg-image-html-one-mobile);  
   transition: none;
   z-index: -2; 
     color: var(--color-text-primary);
@@ -456,7 +459,7 @@ a[href] img:hover{
 }
 
 .welcome-box {
-  max-width:40%;
+  max-width:70%;
   min-width: 280px;
 }
 
@@ -811,7 +814,7 @@ button {
 
 
   html{
-    
+    background-color: var(--color-bg-image-html-one);
     background-attachment: fixed;
     background-image: var(--bg-image-html); 
     background-repeat: no-repeat;
