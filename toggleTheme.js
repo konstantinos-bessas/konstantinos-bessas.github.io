@@ -44,22 +44,23 @@ function calculateSettingAsThemeString({ localStorageTheme, systemSettingDark })
   /**
   * On page load:
   */
-  
+  window.addEventListener('load', function () {
+  })  
   /**
   * 1. Grab what we need from the DOM and system settings on page load
   */
   const button = document.querySelector("[data-theme-toggle]");
-  if(button == null){
-    location.reload(); 
-  }
+  // if(button == null){
+  //   location.reload(); 
+  // }
   const localStorageTheme = localStorage.getItem("theme");
   // if(localStorageTheme == null){
   //   location.reload(); 
   // }
   const systemSettingDark = window.matchMedia("(prefers-color-scheme: dark)");
-  if(systemSettingDark == null){
-    location.reload(); 
-  }
+  // if(systemSettingDark == null){
+  //   location.reload(); 
+  // }
 
   /**
   * 2. Work out the current site settings
