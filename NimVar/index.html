@@ -1,0 +1,107 @@
+﻿<!doctype html>
+<html data-theme="empty" lang="en-US">
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="utf-8">
+    <meta name="author" content="Konstantinos Bessas">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="description"
+        content=" This is the homepage of the website of the NimVar Project (Nonlocality in image denoising and other variational problems). "
+    >
+    <link rel="icon" href="images/NimVar_Logo.png" type="image/x-icon">
+    <!-- https://stackoverflow.com/questions/436411/where-should-i-put-script-tags-in-html-markup -->
+    <script src="language.js"></script>
+    <script src="toggleTheme.js" async></script>
+    <script async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+    <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}
+    });
+    </script>
+    <title>
+      Home
+    </title>
+  </head>
+  <body>
+    <div class="topnav" id="main-navigation-bar">
+      <nav class="topnav__main-navigation-bar">
+        <a href="index.html" class="topnav__main-button topnav__main-button--active">
+          <span data-i18n="Home_main-navigation-bar"></span>
+        </a>
+      </nav>
+      <div class="topnav__language-bar">
+        <ul>
+          <li><a href="" onclick="changeLanguage('en')">EN</a></li>
+          <li><a href="" onclick="changeLanguage('it')">IT</a></li>
+        </ul>
+      </div>   
+    </div><!--topnav-->
+    <div class="toggle-theme-part">
+      <button type="button" data-theme-toggle aria-label="Change to light theme">
+        <img id="Logo"
+          src="images/NimVar_Logo.png"
+          alt="NimVar-Logo"
+        >
+        <img id="noisedLogo"
+          src="images/NimVar_Logo_noised.png"
+          alt="NimVar-Logo"
+        >
+      </button>
+    </div><!--toggle-theme-part-->
+    <header>
+      <h1 data-i18n="Main_title"></h1>
+      <h2 id="main-title" class="unloaded">Nonlocality in image denoising and other variational problems</h2>
+    </header>    
+    <div class="main-and-sidebar">
+      <main>
+        <ul>
+          <li><strong data-i18n="PI"></strong><strong>:</strong> <a href="../index.html">Konstantinos Bessas</a>.</li>
+          <li><strong data-i18n="ResearchTeam"></strong><strong>:</strong> Sören Bartels, Davide Carazzato, Antonin Chambolle, Patrick Dondl, Maria Giovanna Mora (<span data-i18n="sci_mentor"></span>), Lucia Scardia, Giorgio Stefani.</li>
+          <li><strong data-i18n="Host"></strong><strong>:</strong> <span data-i18n="my_university"></span>.</li>
+          <li><strong data-i18n="Dur"></strong><strong>:</strong> 01/03/2024 - 28/02/2027.</li>
+          <li><strong data-i18n="Fund_ag"></strong><strong>:</strong> <span data-i18n="Fond_Cariplo"></span>.</li>
+          <li><strong data-i18n="Fund"></strong><strong>:</strong> 200.000€.</li>
+        </ul>
+        <hr class="separator separator--line">
+        <h3>Abstract:</h3> 
+        <p data-i18n="Abstract_1"></p>
+        <p data-i18n="Abstract_2"></p>
+        <p data-i18n="Abstract_3"></p>
+        <p data-i18n="Abstract_4"></p>
+        <p data-i18n="Abstract_5"></p>
+        <p>
+          <span data-i18n="Abstract_6"></span>
+          <a href="../index.html">Konstantinos Bessas</a>.
+        </p>
+      </main>
+      <div class="sidebar">
+        <h2 data-i18n="Links"></h2>
+        <ul>
+          <li>
+            <a target="_blank" href="">
+              <img
+              src="images/NimVar_Logo.png"
+              alt="NimVar-Logo"
+              width="100"
+              >
+            </a>
+          </li>
+        </ul>
+      </div><!--sidebar--> 
+    </div>
+    <footer>
+        <ul>
+          <li><a target="_blank" data-i18n="Fond_Cariplo" href="https://www.fondazionecariplo.it/en/news/index.html"></a></li>
+          <li>
+            <ul>
+              <li><a target="_blank" data-i18n="my_university" href="https://web-en.unipv.it/"></a></li>
+              <li><a target="_blank" data-i18n="my_department" href="https://matematica.unipv.it/en/homepage-english/"></a></li>
+            </ul>
+          </li>
+        </ul>
+    </footer>
+  </body>
+</html>
