@@ -459,8 +459,7 @@ a[href] img:hover{
 }
 
 .welcome-box {
-  max-width:100%;
-  min-width: 280px;
+  width:100%;
 }
 
 .sidebar {
