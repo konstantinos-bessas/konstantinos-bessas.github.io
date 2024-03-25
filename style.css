@@ -516,6 +516,7 @@ img{
 }
 .welcome-box img{
   width: 100%;
+  content: url(images/KB2.png);
 }
 .welcome-box p{
   width: 50%;
@@ -808,7 +809,9 @@ button {
   /* For desktop: */
 
 
-  
+  .welcome-box img {
+    content: url(images/KB.png);
+  }  
 
 
 
