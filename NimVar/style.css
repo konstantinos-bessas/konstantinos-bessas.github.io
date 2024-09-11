@@ -27,7 +27,7 @@
     --color-eight:#9c870faf;
     --color-bg-h2: var(--color-eight);
     --color-link-unhover: var(--color-one);
-      --color-link-hover: var(--color-two);
+    --color-link-hover: var(--color-two);
     --color-main-navigation-bar: var(--color-three);
     --color-main-navigation-bar-button-unhover: var(--color-text-secondary);
     --color-main-navigation-bar-button-hover: var(--color-one);

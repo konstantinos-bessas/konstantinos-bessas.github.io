@@ -20,9 +20,15 @@
   --color-seven: #ffee0070;
   --color-eight:#9c870faf;
   --color-nine: grey;
+  --color-ten: #1f5e06;
+  /* --color-ten: rgb(16, 17, 112); */
   --color-bg-h2: var(--color-eight);
-  --color-link-unhover: var(--color-one);
-	--color-link-hover: var(--color-two);
+  --color-link-unhover: var(--color-ten);
+	--color-link-hover: var(--color-one);
+  --color-link-unhover-language-bar: rgb(47, 221, 82);
+  --color-link-hover-language-bar: gold;
+  --color-link-unhover-mobile: var(--color-one);
+	--color-link-hover-mobile: var(--color-three);
   --color-main-navigation-bar: var(--color-three);
   --color-main-navigation-bar-button-unhover: var(--color-text-secondary);
   --color-main-navigation-bar-button-hover: var(--color-one);
@@ -54,6 +60,10 @@
   --color-bg-h2: var(--color-ten);
   --color-link-unhover: var(--color-one);
 	--color-link-hover: var(--color-nine);
+  --color-link-unhover-language-bar: var(--color-link-unhover);
+  --color-link-hover-language-bar: var(--color-link-hover);
+  --color-link-unhover-mobile: var(--color-one);
+	--color-link-hover-mobile: var(--color-nine);
   --color-main-navigation-bar: var(--color-three);
   --color-main-navigation-bar-button-unhover: var(--color-text-secondary);
   --color-main-navigation-bar-button-hover: var(--color-eight);
@@ -425,11 +435,11 @@ body{
 }
 
 a[href]{
-  color: var(--color-link-unhover);
+  color: var(--color-link-unhover-mobile);
 }
 
 a[href]:hover{
-  color: var(--color-link-hover);
+  color: var(--color-link-hover-mobile);
 }
 
 a[href] img:hover{
@@ -686,6 +696,9 @@ img{
   border-top-right-radius: 6px;
 }
 
+
+
+
 h1{
   text-align: center;
   font-size: 300%;
@@ -812,8 +825,43 @@ button {
     content: url(images/KB.png);
   }  
 
+  a[href]{
+    color: var(--color-link-unhover);
+    font-weight: 700;
+  }
+  
+  a[href]:hover{
+    color: var(--color-link-hover);
+  }
 
+  .topnav__language-bar a[href]{
+    color: var(--color-link-unhover-language-bar);
+    font-weight: normal;
+  }
+  
+  .topnav__language-bar a[href]:hover{
+    color: var(--color-link-hover-language-bar);
+  }
 
+  .topnav__main-navigation-bar a {
+    float: left;
+    display: block;
+    color: var(--color-main-navigation-bar-button-unhover);
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+    font-weight: normal;
+  }
+  
+  .topnav__main-navigation-bar a:hover {
+    background-color: var(--color-main-navigation-bar-button-hover);
+    color: var(--color-text-primary);
+  }
+  
 
   html{
     background-color: var(--color-bg-image-html-one);
