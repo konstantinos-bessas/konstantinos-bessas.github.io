@@ -627,9 +627,8 @@ main ul {
   /* For desktop: */
   
   
-  
-  
-  
+
+
   
   .toggle-theme-part button:hover #Logo {
     display: none;
@@ -657,6 +656,16 @@ main ul {
     transition-timing-function: linear;
   }
 
+  .fade-in.unloaded {
+    animation: fadeIn 2s ease;
+    opacity: 1;
+  }
+  .fade-in {
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+  }
+
   
   @keyframes separator-width {
     0% {
@@ -667,6 +676,11 @@ main ul {
     100% {
       width: 100%;
     }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
   }
 
   html{
@@ -681,4 +695,5 @@ main ul {
     transition-duration: 2s;
     transition-timing-function: linear;
   }
+
 }

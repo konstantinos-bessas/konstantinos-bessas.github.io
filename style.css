@@ -20,12 +20,12 @@
   --color-seven: #ffee0070;
   --color-eight:#9c870faf;
   --color-nine: grey;
-  --color-ten: #1f5e06;
-  /* --color-ten: rgb(16, 17, 112); */
+  /* --color-ten:#340404; */
+  --color-ten:#3d0f0f;
   --color-bg-h2: var(--color-eight);
   --color-link-unhover: var(--color-ten);
 	--color-link-hover: var(--color-one);
-  --color-link-unhover-language-bar: rgb(47, 221, 82);
+  --color-link-unhover-language-bar: #cc7511;
   --color-link-hover-language-bar: gold;
   --color-link-unhover-mobile: var(--color-one);
 	--color-link-hover-mobile: var(--color-three);
@@ -820,6 +820,10 @@ button {
 @media only screen and (min-width: 750px) {
   /* For desktop: */
 
+ 
+  
+
+
 
   .welcome-box img {
     content: url(images/KB.png);
@@ -911,6 +915,18 @@ button {
     transition-duration: 2s;
     transition-timing-function: linear;
   }
+
+  .fade-in.unloaded {
+    animation: fadeIn 2s ease;
+    opacity: 1;
+  }
+  .fade-in {
+    transition-property: all;
+    transition-duration: 2s;
+    transition-timing-function: linear;
+  }
+
+
   button {
     transition: all 1s ease-in-out;
   } 
@@ -925,6 +941,11 @@ button {
       width: 100%;
     }
   }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
   
   .welcome-box {
     max-width:50%;
@@ -932,13 +953,8 @@ button {
   }
 
 
+
 }
-
-
-
-
-
-
 
 
 
