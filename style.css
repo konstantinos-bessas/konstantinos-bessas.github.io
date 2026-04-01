@@ -915,12 +915,12 @@ button {
   transition-timing-function: ease-in-out;
 }
 
-  a[href]{
-    transition: color 500ms ease-in-out;
-  }
+  /* a[href]{
+    transition: color 100ms ease-in-out;
+  } */
   
   a[href]:hover{
-    transition: all 100ms ease-in-out;
+    transition: all 200ms ease-in-out;
   }
   
   a[href] img{
@@ -953,6 +953,8 @@ button {
     transition-duration: 2s;
     transition-timing-function: linear;
   }
+
+ 
 
   .fade-in.unloaded {
     animation: fadeIn 2s ease;
