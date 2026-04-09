@@ -63,7 +63,7 @@
   --color-four:#656565;
   --color-five: rgba(11, 11, 135, 0.5);
   --color-six:rgb(192, 192, 192, 0.8);
-  --color-seven: #021380ac; 
+  --color-seven: #021380c7; 
   --color-eight: rgb(46, 46, 177);
   --color-nine: rgb(157, 23, 209);
   --color-ten:#656565b1;
@@ -83,7 +83,7 @@
   --color-fg-toggle-theme: var(--color-six);
   --color-bg-image-html-one: var(--color-seven);
   --color-bg-image-html-one-mobile: var(--color-seven);
-  --bg-image-html: url(images/background50.png);
+  --bg-image-html: url(images/background75light.png);
   --bg-image-html-mobile: url(images/background25darkMobile.png); /*Foto di <a href="https://unsplash.com/it/@anniespratt?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Annie Spratt</a> su <a href="https://unsplash.com/it/foto/tessuto-nero-in-primo-piano-fotografia-6a3nqQ1YwBw?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> */
   
   --color-title-effect-one: aquamarine;
